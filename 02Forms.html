@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Creating Responsive Sites</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="02FormsStyle.css">
+    <link rel="stylesheet" href="02FormStyle2.css">
+</head>
+
+<body>
+
+<header>
+  <h2>Things that float</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#">Pool Accesories</a></li>
+        <li><a href="#">Feathers</a></li>
+        <li><a href="#">Balloons</a></li>
+        <li><a href="#">Take a Quiz!</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h2>Floating LED art illustrates the quality of NYC's water</h2>
+    <p>Plus POOL Light shows whether or not it's safe to swim.</p>
+    <img src="img/img02.jpeg" alt="LED Flotante New York" style="max-width:100%;width:auto;height:auto;">
+    <p>You don't have to check a website to find out whether or not New York City's water is 
+    healthy -- for the next few months, you just have to take a look at some art in the water itself. 
+    Playlab, Family New York and Floating Point have debuted a floating art installation, + POOL Light, 
+    that displays the water quality in NYC's East River using LED lights.</p>
+  </article>
+
+  <aside>
+    <h2>Poetry Corner</h2>
+    <h3>Venus</h3>
+    <q>¡Oh, reina rubia! -díjele, mi alma quiere dejar su crisálida
+        y volar hacia a ti, y tus labios de fuego besar;
+        y <b>flotar</b> en el nimbo que derrama en tu frente luz pálida,
+        y en siderales éxtasis no dejarte un momento de amar .
+        El aire de la noche refrescaba la atmósfera cálida.
+        Venus, desde el abismo, me miraba con triste mirar.</q>
+        <br>
+        <img src="img/img03.jpg" alt="Poeta Rubén Darío" style="max-width:100%;width:auto;height:auto;">
+        <br>
+    <address>Rubén Darío, Nicaragua</address>
+</aside>
+</section>
+
+<section>
+    <form class="form-Wrapper" id="redemption" method="post">
+		<div class="form-Intro">
+			<h1>Your Favourite Floating Things</h1>
+			<h2>This month: Pool Floats!</h2>
+		</div>
+		<fieldset class="form-About_Wrapper">
+			<legend>Your very favourite</legend>
+			<div class="form-Input_Wrapper">
+				<input id="floatName" name="floatName" type="text" placeholder="e.g. Watermelon Float" required/>
+				<label for="floatName">What's the name of your favourite float?</label>
+			</div>
+			<div class="form-Input_Wrapper">
+				<input id="yearOfFabrication" name="yearOfFabrication" type="number" min="1900" max="2019" required>
+				<label for="yearOfFabrication">What was the year of fabrication?</label>
+			</div>
+            <div class="form-Input_Wrapper">
+				<span class="form-Slider_Wrapper">
+					<input id="rateIt" name="rateIt" type="range" min="1" max="10" value="5" onchange="showValue(this.value)">
+					<span id="range">5</span>
+				</span>
+				<label for="rateIt">Rate it form 1 to 10!</label>
+			</div>
+            <div class="form-Input_Wrapper">
+				<textarea id="freeComment" name="freeComment" placeholder="I was so confortable I got sunburned"></textarea>
+				<label for="freeComment">Give us a free comment on the float</label>
+			</div>
+			
+			<script>
+				function showValue(newValue)
+				{
+					document.getElementById("range").innerHTML=newValue;
+				}
+			</script>
+			
+		</fieldset>
+		
+		<fieldset class="form-You_Wrapper">
+			<legend>Tell us about you)</legend>
+			
+			<div class="form-Input_Wrapper">
+				<input id="name" name="name" pattern="([a-zA-Z]{3,30}\s*)+[a-zA-Z]{3,30}" placeholder="Dwight Schultz" required>
+				<label for="name">Your Name</label>
+			</div>
+			<div class="form-Input_Wrapper">
+				<input id="color" name="color" type="color">
+				<label for="color">Your favorite color</label>
+			</div>
+			<div class="form-Input_Wrapper">
+				<input id="date" class="pickDate" type="date" name="date" required>
+				<label for="date">Your birthday</label>
+			</div>
+			<div class="form-Input_Wrapper">
+				<input id="tel" name="tel" type="tel" placeholder="1-234-546758" autocomplete="off" required>
+				<label for="tel">Your phone number</label>
+			</div>
+			<div class="form-Input_Wrapper">
+				<input id="email" name="email" type="email" placeholder="dwight.schultz@gmail.com" required>
+				<label for="email">Your Email address</label>
+			</div>
+			<div class="form-Input_Wrapper">
+				<input id="web" name="web" type="url" placeholder="www.mysite.com">
+				<label for="web">Your Web address</label>
+			</div>
+		</fieldset>
+		<button class="form-Submit_Btn" type="submit" value="Submit Redemption">
+			<span class="flipper">
+				<span class="flipper-object flipper-vertical">
+					<span class="panel front">Ready?</span>
+					<span class="panel back">Submit</span>
+				</span>
+			</span>
+        </button>
+    </form>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
